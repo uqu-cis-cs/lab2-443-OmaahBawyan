@@ -21,7 +21,7 @@ public class Car{
      * private dataType name;
      *
      */
-    private String modle;
+    private String model;
     private boolean inOutGarage;
 
     /************ Part 2 **************/
@@ -35,9 +35,9 @@ public class Car{
      *      //body
      * }
      */
-    public car()
+    public Car()
     {
-        modle="";
+        model="";
         inOutGarage=false;
     }
 
@@ -52,7 +52,7 @@ public class Car{
      */
     public String getmodel()
     {
-        return model;
+        return this.model;
     }
     public boolean getinOutGarage()
     {
@@ -71,7 +71,7 @@ public class Car{
      */
      public void setmodel(String m)
     {
-        model=m;
+        this.model=m;
     }
 
 
