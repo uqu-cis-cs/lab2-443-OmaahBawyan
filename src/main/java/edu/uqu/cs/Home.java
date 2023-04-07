@@ -24,7 +24,8 @@ public class Home{
 
 
                 //List all the cars in the garage. Hint: use method listCars () of class Garage
-                //HEREgarage.listCar();
+                //HERE
+                garage.listCar();
 
 
                 // Place "Ford Fusion" in the garage. Hint: use method addCar () of class Garage
