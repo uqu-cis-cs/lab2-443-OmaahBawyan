@@ -21,6 +21,7 @@ public class Garage{
      * private classType [] varName = new classType[size];
      *
      */
+    private Car[] cars =new Car[3];
 
     /************ Part 2 **************/
     /**
@@ -31,6 +32,7 @@ public class Garage{
      * public dataType varName= value;
      *
      */
+    public static int countCar=0;
 
     /************ Part 3 **************/
     /**
@@ -45,6 +47,13 @@ public class Garage{
      *     }
      *}
      */
+    public Garage()
+    {
+        for(int i=0;i<cars.length;i++)
+        {
+            cars[i]=new Car();
+        }
+    }
 
     /************ Part 4 **************/
     /**
@@ -59,6 +68,20 @@ public class Garage{
      * Syntax:
      * public void methodName(String m)
      */
+    public void addCar(String modlename) 
+    {
+    	for(int i=0;i<cars.length;i++) 
+    	{
+//    		boolean check=cars[i].getmodel().equalsIgnoreCase(modlename);
+    		if(cars[i].getinOutGarage()==false) 
+    		{
+    			cars[i].setmodel(modlename);
+    			cars[i].moveCarIn();
+    			countCar++;
+    			break;
+    		}
+    	}
+    }
 
 
     /************ Part 5 **************/
@@ -71,6 +94,19 @@ public class Garage{
      * public void methodName(String m)
      *
      */
+    public void moveOut(String modelname) 
+    {
+    	for(int i=0;i<cars.length;i++) 
+    	{
+    		boolean check=cars[i].getmodel().equalsIgnoreCase(modelname);
+    		if(check==true) 
+    		{
+    			cars[i].setmodel("");
+    			cars[i].moveCarOut();
+    			countCar--;
+    		}
+    	}
+    }
 
 
 
@@ -84,6 +120,19 @@ public class Garage{
      * public void methodName(String m)
      *
      */
+    public void moveIn(String modelname) 
+    {
+    	for(int i=0;i<cars.length;i++) 
+    	{
+    		boolean check=cars[i].getmodel().equalsIgnoreCase(modelname);
+    		if(check==true) 
+    		{
+    			cars[i].setmodel(modelname);
+    			cars[i].moveCarIn();
+    			countCar++;
+    		}
+    	}
+    }
 
 
     /************ Part 7 **************/
@@ -95,6 +144,15 @@ public class Garage{
      * public void methodName(String m)
      *
      */
+    public void listCar() 
+    {
+    	System.out.println("the cars in the garage: ");
+    	for(int i=0;i<cars.length;i++) 
+    	{
+    		System.out.println(cars[i].getmodel());
+    	}
+    	
+    }
 
 
 
